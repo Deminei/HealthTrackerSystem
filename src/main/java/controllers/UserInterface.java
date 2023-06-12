@@ -1,7 +1,6 @@
 package controllers;
 
 import models.*;
-
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -17,7 +16,7 @@ public class UserInterface {
     public UserInterface(UserManager userManager, FileManager fileManager) {
         this.userManager = userManager;
         this.scanner = new Scanner(System.in);
-        this.fileManager = fileManager; // Assign FileManager object
+        this.fileManager = fileManager;
     }
 
     public void start() {
@@ -54,16 +53,16 @@ public class UserInterface {
     }
 
     private void createNewUser() {
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
         System.out.println("Enter a username for the new account:");
         String username = scanner.nextLine();
         if (userManager.findUser(username) != null) {
             System.out.println("That username is already taken. Please choose another one.");
         } else {
-            userManager.createUser(username);  // Create a new user and set it as the current user
+            userManager.createUser(username);
             System.out.println("Account successfully created and logged in as "+ConsoleColors.PURPLE_UNDERLINED+""+ username + "."+ ConsoleColors.RESET);
             try {
-                fileManager.saveData(); // Save the new user's data
+                fileManager.saveData();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -72,14 +71,14 @@ public class UserInterface {
 
 
     private void loginUser() {
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
         System.out.println("Enter your username:");
         String username = scanner.nextLine();
         User user = userManager.findUser(username);
         if (user != null) {
-            userManager.login(username);  // Set the currentUser
+            userManager.login(username);
             System.out.println("Successfully logged in as"+ConsoleColors.PURPLE_UNDERLINED+" "+ username + "."+ ConsoleColors.RESET);
-            fileManager.loadData();  // Load the data for the logged-in user
+            fileManager.loadData();
         } else {
             System.out.println("No user found with that username.");
         }
@@ -136,7 +135,7 @@ public class UserInterface {
             double totalExerciseDuration = Analysis.calculateTotalExerciseDuration(exerciseActivities);
             double avgSleepHours = Analysis.calculateAverageSleepHours(sleepRecords);
 
-            // Calculate weekly averages based on daily averages
+            //Calculates weekly averages based on daily averages
             double weeklyAvgCalories = avgCalories * 7;
             double weeklyTotalExerciseDuration = totalExerciseDuration * 7;
             double weeklyAvgSleepHours = avgSleepHours * 7;
@@ -152,12 +151,6 @@ public class UserInterface {
         }
     }
 
-
-
-
-
-
-
     private void enterFoodItem(User currentUser) {
         scanner.nextLine();
         System.out.println("Enter the name of the food item:");
@@ -165,7 +158,7 @@ public class UserInterface {
         System.out.println("Enter the calorie count of the food item:");
         int calories = scanner.nextInt();
         System.out.println("Enter the date of consumption (in format YYYY-MM-DD):");
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
         String dateStr = scanner.nextLine();
         LocalDate date = LocalDate.parse(dateStr);
 
@@ -176,7 +169,7 @@ public class UserInterface {
     }
 
     private void enterExercise(User currentUser) {
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
         System.out.println("Enter the type of exercise:");
         String exerciseType = scanner.nextLine();
         System.out.println("Enter the duration of exercise in minutes:");
@@ -184,7 +177,7 @@ public class UserInterface {
         System.out.println("Enter the estimated calories burned:");
         int caloriesBurned = scanner.nextInt();
         System.out.println("Enter the date of the exercise (in format YYYY-MM-DD):");
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
         String dateStr = scanner.nextLine();
         LocalDate date = LocalDate.parse(dateStr);
 
@@ -195,7 +188,7 @@ public class UserInterface {
     }
 
     private void enterSleepRecord(User currentUser) {
-        scanner.nextLine();  // Consume newline left-over
+        scanner.nextLine();
         System.out.println("Enter the date of the sleep record (in format YYYY-MM-DD):");
         String dateStr = scanner.nextLine();
         LocalDate date = LocalDate.parse(dateStr);

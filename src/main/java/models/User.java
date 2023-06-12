@@ -1,7 +1,5 @@
 package models;
 
-import controllers.FileManager;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,20 +54,17 @@ public class User {
         }
     }
 
-
     public void addExercise(Exercise exercise) {
         if (!exerciseActivities.contains(exercise)) {
             exerciseActivities.add(exercise);
         }
     }
 
-
     public void addSleepRecord(SleepRecord sleepRecord) {
         if (!sleepRecords.contains(sleepRecord)) {
             sleepRecords.add(sleepRecord);
         }
     }
-
 
     @Override
     public String toString() {

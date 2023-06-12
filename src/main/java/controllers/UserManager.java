@@ -40,8 +40,6 @@ public class UserManager {
         }
     }
 
-
-
     public boolean login(String username) {
         User user = findUser(username);
         if (user != null) {
@@ -61,7 +59,6 @@ public class UserManager {
         return null;
     }
 
-
     public void addUser(User user) {
         if (!users.contains(user)) {
             users.add(user);
@@ -69,8 +66,6 @@ public class UserManager {
             System.out.println("Total users: " + users.size());
         }
     }
-
-
 
     public void addFoodItem(FoodItem foodItem) {
         this.currentUser.addFoodItem(foodItem);
@@ -84,6 +79,5 @@ public class UserManager {
         this.currentUser.addSleepRecord(sleepRecord);
     }
 
-    // other methods to handle user-related operations...
 }
 

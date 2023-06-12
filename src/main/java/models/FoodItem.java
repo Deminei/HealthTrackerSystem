@@ -7,14 +7,12 @@ public class FoodItem {
     private int calories;
     private LocalDate date;
 
-    //constructor
     public FoodItem(String name, int calories, LocalDate date) {
         this.name = name;
         this.calories = calories;
         this.date = date;
     }
 
-    //getters and setters
     public String getName() {
         return name;
     }
@@ -43,8 +41,4 @@ public class FoodItem {
     public String toString() {
         return "FoodItem [name=" + name + ", calories=" + calories + ", date=" + date + "]";
     }
-
-
-
-// constructor, getters, setters...
 }

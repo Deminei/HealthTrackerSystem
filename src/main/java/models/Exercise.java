@@ -51,6 +51,4 @@ public class Exercise {
     public String toString() {
         return "Exercise [type=" + type + ", duration=" + duration + ", caloriesBurned=" + caloriesBurned + ", date=" + date + "]";
     }
-
-// constructor, getters, setters...
 }

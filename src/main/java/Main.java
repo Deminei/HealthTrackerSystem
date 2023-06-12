@@ -1,9 +1,6 @@
 import controllers.FileManager;
 import controllers.UserInterface;
 import controllers.UserManager;
-import models.User;
-
-import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
