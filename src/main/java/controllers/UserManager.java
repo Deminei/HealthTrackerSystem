@@ -1,10 +1,6 @@
 package controllers;
 
-import models.Exercise;
-import models.FoodItem;
-import models.SleepRecord;
 import models.User;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -66,18 +62,5 @@ public class UserManager {
             System.out.println("Total users: " + users.size());
         }
     }
-
-    public void addFoodItem(FoodItem foodItem) {
-        this.currentUser.addFoodItem(foodItem);
-    }
-
-    public void addExercise(Exercise exercise) {
-        this.currentUser.addExercise(exercise);
-    }
-
-    public void addSleepRecord(SleepRecord sleepRecord) {
-        this.currentUser.addSleepRecord(sleepRecord);
-    }
-
 }
 

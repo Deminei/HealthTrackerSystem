@@ -21,24 +21,13 @@ public class SleepRecord {
         return date;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
 
     public LocalTime getSleepTime() {
         return sleepTime;
     }
 
-    public void setSleepTime(LocalTime sleepTime) {
-        this.sleepTime = sleepTime;
-    }
-
     public LocalTime getWakeupTime() {
         return wakeupTime;
-    }
-
-    public void setWakeupTime(LocalTime wakeupTime) {
-        this.wakeupTime = wakeupTime;
     }
 
     public int calculateSleepHours() {

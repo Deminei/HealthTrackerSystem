@@ -36,18 +36,6 @@ public class User {
     }
 
     // setter methods
-    public void setFoodItems(List<FoodItem> foodItems) {
-        this.foodItems = foodItems;
-    }
-
-    public void setExerciseActivities(List<Exercise> exerciseActivities) {
-        this.exerciseActivities = exerciseActivities;
-    }
-
-    public void setSleepRecords(List<SleepRecord> sleepRecords) {
-        this.sleepRecords = sleepRecords;
-    }
-
     public void addFoodItem(FoodItem foodItem) {
         if (!foodItems.contains(foodItem)) {
             foodItems.add(foodItem);

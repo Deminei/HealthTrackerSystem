@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class UserInterface {
     private UserManager userManager;
     private Scanner scanner;
-    private User currentUser;
     private FileManager fileManager;
 
     public UserInterface(UserManager userManager, FileManager fileManager) {

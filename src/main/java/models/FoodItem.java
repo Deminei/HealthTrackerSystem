@@ -17,24 +17,12 @@ public class FoodItem {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getCalories() {
         return calories;
     }
 
-    public void setCalories(int calories) {
-        this.calories = calories;
-    }
-
     public LocalDate getDate() {
         return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
     }
 
     @Override
