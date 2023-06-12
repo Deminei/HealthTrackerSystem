@@ -1,0 +1,7 @@
+dude,hotdog,100,2023-05-06
+dude,burrito,500,2023-05-20
+mikal,candy,100,2023-02-05
+mikal,taco,200,2023-05-02
+dude,sorbet,200,2023-05-07
+dude,soup,350,2023-05-04
+dude,ribs,600,2023-05-04
